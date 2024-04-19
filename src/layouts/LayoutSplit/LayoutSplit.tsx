@@ -13,7 +13,8 @@ interface LayoutSplitProps{
 
 const LayoutSplit: {Aside:FC<ContentProps> ; Main:FC<ContentProps> } & FC<LayoutSplitProps> = ({ children }) => {
 
-   Children.forEach(children, child => ![Aside, Main].includes(child.type) && console.error('Invalid "LayoutSplitProps" children.') )
+   Children.forEach(children, child => ![Aside, Main].includes(child.type) && console.error('Invalid "LayoutSplitProps" children.') );
+   
    const extractContentFrom = useCallback((slotType:FC<ContentProps>) => Children.map(children, child => child.type == slotType && child.props.children ),[]);
 
    const aside = extractContentFrom( Aside );
