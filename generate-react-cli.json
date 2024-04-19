@@ -1,0 +1,38 @@
+{
+  "usesTypeScript": true,
+  "usesStyledComponents": true,
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true
+    },
+    "container": {
+      "path": "src/containers",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": true
+    },
+    "layout": {
+      "path": "src/layouts",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false
+    },
+    "view": {
+      "customTemplates": {
+        "component": "templates/views/TemplateName.tsx"
+      },
+      "path": "src/views",
+      "withStyle": false,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": true
+    }
+  }
+}
