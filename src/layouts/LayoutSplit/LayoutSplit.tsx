@@ -10,7 +10,6 @@ interface LayoutSplitProps{
    children:Content | Content[]
 }
 
-
 const LayoutSplit: {Aside:FC<ContentProps> ; Main:FC<ContentProps> } & FC<LayoutSplitProps> = ({ children }) => {
 
    Children.forEach(children, child => ![Aside, Main].includes(child.type) && console.error('Invalid "LayoutSplitProps" children.') );

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import BaseInput from '../../components/BaseInput/BaseInput'
 import LayoutSplit from '../../layouts/LayoutSplit/LayoutSplit'
 import { useToggleOnKey } from '../../utils/hooks/use-toggle-on-key.hook'
+import { useWindowSize } from '../../utils/hooks/use-window-size.hook'
+import UserForm from '../../containers/UserForm/UserForm'
 
 const Demo = () => {
 
@@ -40,8 +42,10 @@ const Demo = () => {
 
 const Toggle = () => {
 
+  const size = useWindowSize(true)
+
   const toggle = useToggleOnKey('a')
-  return <>{toggle.toString()} </>
+  return <>{toggle.toString()}{JSON.stringify(size)} </>
 }
 
 function ViewHome() {
@@ -52,10 +56,11 @@ function ViewHome() {
       <LayoutSplit>
         <LayoutSplit.Aside> Aside Content  <Toggle/> </LayoutSplit.Aside>
         <LayoutSplit.Main> Main Content 1</LayoutSplit.Main>
-        <LayoutSplit.Main> Main Content 2</LayoutSplit.Main>
+        <LayoutSplit.Main> <UserForm /></LayoutSplit.Main>
         {/* <LayoutSplit.Main> <Demo/> </LayoutSplit.Main> */}
       </LayoutSplit>
     </>
+    
   )
 }
 
