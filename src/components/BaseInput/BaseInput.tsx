@@ -14,11 +14,13 @@ export interface BaseInputProps {
 }
 
 const ValidationDiv = styled.div<{$valid?:boolean}>`
-   padding:3px;
+   padding:5px;
    border-radius: 3px;
-   background-color:${ ({$valid}) => $valid ? 'lightgreen':'crimson' };
-   color:white;
+   margin: 2px;
+   background-color:${ ({$valid}) => $valid ? '#37FAA5':'#FA364A' };
+   color:${ ({$valid}) => $valid ? '#1c8557':'#891e29' };
    font-family:Arial;
+   font-size:0.6em;
 `;
 
 const ValidationMessage = React.memo((props:{validation:Validation | null}) => {
