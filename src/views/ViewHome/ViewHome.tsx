@@ -44,7 +44,7 @@ function ViewHome() {
         <LayoutSplit.Aside> Aside Content </LayoutSplit.Aside>
         <LayoutSplit.Main> Main Content 1</LayoutSplit.Main>
         <LayoutSplit.Main> Main Content 2</LayoutSplit.Main>
-        <LayoutSplit.Main> <Demo/> </LayoutSplit.Main>
+        {/* <LayoutSplit.Main> <Demo/> </LayoutSplit.Main> */}
       </LayoutSplit>
   )
 }
