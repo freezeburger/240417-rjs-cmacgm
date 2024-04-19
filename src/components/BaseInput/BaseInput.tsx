@@ -34,6 +34,7 @@ const ValidationMessage = React.memo((props:{validation:Validation | null}) => {
 }, (prev,next)=>{
    return prev.validation?.valid === next.validation?.valid
 })
+ValidationMessage.displayName = 'MemoValidationMessage'
 
 const BaseInput: FC<BaseInputProps> = memo((props) => {
 
@@ -55,6 +56,8 @@ const BaseInput: FC<BaseInputProps> = memo((props) => {
   )
 
 },(prev,next)=> prev.initialValue === next.initialValue );
+
+BaseInput.displayName = 'MemoBaseInput'
 
 BaseInput.defaultProps = {
   placeholder: "Default Placeholder",

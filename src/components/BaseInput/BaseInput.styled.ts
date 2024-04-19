@@ -6,3 +6,5 @@ export const BaseInputWrapper = styled.div`
   flex-direction:column;
   padding:10px;
 `;
+
+BaseInputWrapper.displayName = 'BaseInputWrapper'
